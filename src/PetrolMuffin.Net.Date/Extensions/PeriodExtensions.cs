@@ -13,8 +13,8 @@ public static class PeriodExtensions
     /// </summary>
     /// <param name="period">Period to compare</param>
     /// <param name="current"><see cref="DateTime"/> to compare with the period</param>
-    /// <param name="includeEdges">compare <see cref="current"/> with edges of the <see cref="Period"/></param>
-    /// <returns>true if the <see cref="current"/> is in the <see cref="Period"/>, otherwise false</returns>
+    /// <param name="includeEdges">compare <see cref="DateTime"/> with edges of the <see cref="Period"/></param>
+    /// <returns>true if the <see cref="DateTime"/> is in the <see cref="Period"/>, otherwise false</returns>
     [Pure]
     public static bool IsInPeriod(this Period period, DateTime current, bool includeEdges = true) =>
         includeEdges ? period.From <= current && current <= period.To : period.From < current && current < period.To;
