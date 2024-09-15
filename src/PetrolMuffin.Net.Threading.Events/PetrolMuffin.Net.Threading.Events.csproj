@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Multithreading for .Net events</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PetrolMuffin.Net.Extensions\PetrolMuffin.Net.Extensions.csproj" />
+      <ProjectReference Include="..\PetrolMuffin.Net.Threading\PetrolMuffin.Net.Threading.csproj" />
+    </ItemGroup>
+
+</Project>

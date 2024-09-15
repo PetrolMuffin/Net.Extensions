@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Common types and interfaces for the .NET</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PetrolMuffin.Net.Extensions\PetrolMuffin.Net.Extensions.csproj" />
+      <ProjectReference Include="..\PetrolMuffin.Net.Guards\PetrolMuffin.Net.Guards.csproj" />
+      <ProjectReference Include="..\PetrolMuffin.Net.Helpers\PetrolMuffin.Net.Helpers.csproj" />
+    </ItemGroup>
+
+</Project>
