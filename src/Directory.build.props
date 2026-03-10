@@ -1,18 +1,18 @@
 <Project>
     <PropertyGroup>
-        <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+        <TargetFrameworks>net7.0;net8.0;net10.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 	
 	<PropertyGroup>
 		<IsPackable>true</IsPackable>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <Authors>Aleksandr Tereshchenko</Authors>
         <PackageProjectUrl>https://github.com/PetrolMuffin/Net.Extensions</PackageProjectUrl>
         <RepositoryUrl>https://github.com/PetrolMuffin/Net.Extensions</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <Copyright>Aleksandr Tereshchenko 2024</Copyright>
+        <Copyright>Aleksandr Tereshchenko 2026</Copyright>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 </Project>

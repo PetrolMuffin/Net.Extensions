@@ -1,4 +1,4 @@
-﻿using JetBrains.Annotations;
+using JetBrains.Annotations;
 
 namespace PetrolMuffin.Net.Scaffolding;
 
@@ -8,8 +8,16 @@ namespace PetrolMuffin.Net.Scaffolding;
 [PublicAPI]
 public abstract class Disposable : IDisposable
 {
-    private StateHolder _stateHolder = new();
+    private volatile StateHolder _stateHolder;
 
+    /// <summary>
+    ///   Initializes a new instance of the <see cref="Disposable" /> class
+    /// </summary>
+    protected Disposable()
+    {
+        _stateHolder = new StateHolder(GetType().Name);
+    }
+    
     ~Disposable()
     {
         Dispose(false);
@@ -46,9 +54,8 @@ public abstract class Disposable : IDisposable
 
     private void Dispose(bool disposing)
     {
-        if (_stateHolder.IsDisposed) return;
+        if (!_stateHolder.TryMarkDisposed()) return;
         if (disposing) ReleaseManagedResources();
         ReleaseUnmanagedResources();
-        _stateHolder.Disposed();
     }
 }
