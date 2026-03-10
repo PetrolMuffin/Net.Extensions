@@ -7,7 +7,7 @@ namespace PetrolMuffin.Net.Exceptions;
 /// </summary>
 [Serializable]
 [PublicAPI]
-public sealed class StringNullOrEmptyException : Exception
+public sealed class StringNullOrEmptyException : CollectionNullOrEmptyException<string>
 {
     /// <summary>
     ///   Initializes a new instance of the <see cref="StringNullOrEmptyException" /> class
@@ -15,13 +15,7 @@ public sealed class StringNullOrEmptyException : Exception
     /// <param name="message">exception message</param>
     /// <param name="variableName">name of the variable</param>
     public StringNullOrEmptyException(string? message, string variableName)
-        : base($"'{variableName}' is null or empty. {message}")
+        : base(message, variableName)
     {
-        VariableName = variableName;
     }
-        
-    /// <summary>
-    ///   Gets the name of the variable that is empty
-    /// </summary>
-    public string VariableName { get; }
 }

@@ -11,7 +11,7 @@ namespace PetrolMuffin.Net.Extensions;
 public static class EnumExtensions
 {
     /// <summary>
-    /// Get custom attribute from enum field
+    /// Get a custom attribute from the enum field
     /// </summary>
     /// <typeparam name="TAttribute">Type of attribute to find</typeparam>
     [Pure]

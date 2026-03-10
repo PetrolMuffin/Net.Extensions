@@ -1,9 +1,12 @@
-﻿namespace PetrolMuffin.Net.Exceptions;
+﻿using JetBrains.Annotations;
+
+namespace PetrolMuffin.Net.Exceptions;
 
 /// <summary>
 ///   Thrown if a service was not initialized.
 /// </summary>
 [Serializable]
+[PublicAPI]
 public class NotInitializedException : InvalidOperationException
 {
     /// <summary>
